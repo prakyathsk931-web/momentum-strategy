@@ -741,6 +741,17 @@ def plot_seasonality_heatmap(prices, ticker_name):
 
 plot_seasonality_heatmap(jswsteel_long, "JSWSTEEL.NS")
 
+salary = int(input("Applicant's salary is: "))
+age = int(input("Applicant's age is: "))
+cibil = int(input("Applicant's CIBIL score is: "))
+
+if salary > 30000 and cibil > 700 and age <= 55:
+    print("Sanction")
+elif salary > 30000 and cibil > 700 and age > 55:
+    print("Appraisal")
+else:
+    print("Reject")
+
 
 Step15
 
