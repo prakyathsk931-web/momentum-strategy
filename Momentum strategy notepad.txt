@@ -693,6 +693,23 @@ print(f"\nDays with >15% single-day move: {len(big_moves)}")
 if len(big_moves) > 0:
     print(big_moves)
 
+balance = 30000
+withdrawal = 15000
+
+if withdrawal <= 0:
+    print("Invalid Amount")
+
+elif withdrawal > 20000:
+    print("Limit Exceeded")
+
+elif withdrawal > balance:
+    print("Insufficient Balance")
+
+else:
+    balance = balance - withdrawal
+    print("Withdrawal Successful")
+    print("Remaining Balance:", balance)
+
 #Step16
 def plot_seasonality_heatmap(prices, ticker_name):
     monthly_ret = prices.resample("ME").last().pct_change() * 100
